@@ -1,0 +1,3 @@
+D:\Making My_Software\Practice_Software\C++ Example\cpp_FormTimeHourDay\x64\Debug\cpp_FormTimeHourDay.vcxprojAssemblyReference.cache
+D:\Making My_Software\Practice_Software\C++ Example\cpp_FormTimeHourDay\x64\Debug\cppFormTimeHourDay.main.resources
+D:\Making My_Software\Practice_Software\C++ Example\cpp_FormTimeHourDay\x64\Debug\cpp_FormTimeHourDay.vcxproj.GenerateResource.cache

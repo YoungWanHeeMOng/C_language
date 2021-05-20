@@ -1,0 +1,5 @@
+﻿  formInit.cpp
+  main.cpp
+  Generating Code...
+  formInit.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  cpp_FormTimeHourDay.vcxproj -> D:\Making My_Software\Practice_Software\C++ Example\cpp_MultiThread\x64\Debug\cpp_FormTimeHourDay.exe

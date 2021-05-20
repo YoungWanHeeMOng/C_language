@@ -1,0 +1,74 @@
+
+#include <iostream>
+#include <thread>
+#include <chrono>
+#include <algorithm>
+#include <future>
+
+using namespace std;
+using namespace std::chrono;
+
+typedef long  long int ull;
+
+//void findOdd(std::promise<ull>&& OddSumPromise, ull start, ull end)
+//{
+//    ull OddSum = 0;
+//    for (ull i = start; i <= end; ++i)
+//    {
+//        if (i & 1) {
+//            OddSum += i;
+//        }
+//    }
+//    OddSumPromise.set_value(OddSum);
+//}
+
+ull findOdd( ull start, ull end)
+{
+    ull OddSum = 0;
+    for (ull i = start; i <= end; ++i)
+    {
+        if (i & 1) {
+            OddSum += i;
+        }
+    }
+    return OddSum;
+}
+
+int main()
+{
+    /*ull start = 0, end =1900000000;
+
+    std::promise<ull> OddSum;
+    std::future<ull> OddFuture = OddSum.get_future();
+
+    cout << "Thread Created!!" << endl;
+    std::thread t1(findOdd, std::move(OddSum), start, end);
+
+    cout << "Waiting For Result!!" << endl;
+
+    cout << "OddSum : " << OddFuture.get() << endl;
+
+    cout << "Completed!!" << endl;
+    t1.join();*/
+
+    /// <summary>
+    /// std::sync
+    /// </summary>
+    /// <returns></returns>
+    ull start = 0, end = 1900000000;
+
+    cout << "ThreadID " << std::this_thread::get_id() << endl;
+    cout << "Thread Created if policy is std::launch::async!!" << endl;
+   /* std::future<ull> OddSum=std::async(std::launch::deferred, findOdd, start, end);*/
+    std::future<ull> OddSum = std::async(std::launch::async, findOdd, start, end);
+
+    cout << "Waiting For Result!!" << endl;
+
+    cout << "OddSum : " << OddSum.get() << endl;
+
+    cout << "Completed!!" << endl;
+
+
+
+    return 0;
+}
